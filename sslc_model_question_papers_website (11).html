@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSLC Model Question Papers (2025–2026)</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background-color: #020617; /* solid dark background fix */
+      color: #e5e7eb;
+    }
+    header {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      color: #f8fafc;
+      padding: 26px 20px 18px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    header h3 {
+      margin: 0;
+      font-weight: 400;
+      color: #c7c7c7;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+    .timer-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 40px;
+    }
+    .timer-circle {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.06); /* subtle, not white */
+      box-shadow: 0 0 25px rgba(255,255,255,0.12);
+    }
+    .timer-circle h1 {
+      font-size: 1.8rem; /* increased from 1.2rem */
+      font-weight: 500;
+      color: #d1d5db; /* grey timer text */
+      line-height: 1.6;
+      text-align: center;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 16px;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.75);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-weight: 500;
+      color: #f1f5f9;
+    }
+    .subject-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      margin: 10px 0;
+      background: linear-gradient(135deg, #020617, #020617);
+      border-radius: 12px;
+      text-decoration: none;
+      color: #facc15;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.25s ease;
+    }
+    .subject-list a:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #020617, #1e293b);
+      border-color: rgba(99,102,241,0.6);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h3>Kerala SSLC English Medium – Model Question Papers</h3>
+</header>
+
+<div class="timer-wrapper">
+  <div class="timer-circle">
+    <h1 id="countdown">Board Exam Countdown</h1>
+  </div>
+</div>
+
+<main>
+  <div class="card">
+    <h2>About</h2>
+    <p>
+      This website provides <strong>model question papers</strong> for Kerala SSLC students
+      (2025–2026). Files are organised subject-wise and set-wise (A, B, C).
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Subjects</h2>
+    <div class="subject-list">
+      <a href="https://drive.google.com/drive/folders/1i7k1HKnGcD7emLxPJbFZ3ts_ADOFgNn7" target="_blank">Mathematics</a>
+      <a href="https://drive.google.com/drive/folders/1749V7hTCj8mbGJfzR1DVM6XP0mhXHMEa" target="_blank">Physics</a>
+      <a href="https://drive.google.com/drive/folders/1UGoPsydYt9ZlZ--fybBk382cXJyLLThF" target="_blank">Chemistry</a>
+      <a href="https://drive.google.com/drive/folders/1P7HgcRHkuoM8_YyD53JupvMymyJ0Krmv" target="_blank">Biology</a>
+      <a href="https://drive.google.com/drive/folders/1dJQI6A278SL5z21ChUutu6jbfRPI678F" target="_blank">Social Science</a>
+      <a href="https://drive.google.com/drive/folders/1CMHh2InBduSDq9qI2sa04nEQ6p-EHoHQ" target="_blank">English</a>
+      <a href="https://drive.google.com/drive/folders/1xxKy85Y5XB5t7UTK9YiokIJOVEW_itTP" target="_blank">Hindi</a>
+      <a href="https://drive.google.com/drive/folders/1Pl4e-XOgF8Imv_N9jFGRUbLfhQdNbAq2" target="_blank">Malayalam</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How to Download</h2>
+    <p>
+      Click on a subject to open the folder. You can download individual files
+      or the entire folder from Google Drive / OneDrive.
+    </p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 SSLC Model Papers • Made for Students</p>
+</footer>
+
+<script>
+  const examDate = new Date("March 5, 2026 09:30:00").getTime();
+
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = examDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "SSLC Board Exams Started";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `⏳ ${days} Days ${hours}h ${minutes}m ${seconds}s to SSLC Exam`;
+  }, 1000);
+</script>
+
+</body>
+</html>
